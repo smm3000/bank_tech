@@ -15,5 +15,18 @@ describe Bank do
         expect(bank.show_balance).to eq(0)
     end 
 
-    
+    it 'decreases the balance by the amount withdrawn' do
+        bank = Bank.new
+        expect(bank.withdraw(10)).to eq(-10)
+    end 
+
+    it 'provides the correct balance for acceptance criteria' do
+        bank = Bank.new
+        bank.deposit(1000)
+        bank.deposit(2000)
+        bank.withdraw(500)
+        expect(bank.show_balance).to eq(2500)
+    end 
+
+
 end 
