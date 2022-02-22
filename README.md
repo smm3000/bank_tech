@@ -77,5 +77,3 @@ rspec
 
 The gem 'terminal-table' was used in the project to help format the output for the project. 
 
-
-
