@@ -8,14 +8,14 @@ class Bank
     @transactions = []
   end
 
-  def deposit(amount, date)
+  def deposit(amount)
     @balance += amount
-    @transactions << [date, amount, @balance]
+    @transactions << [Time.now.strftime("%d/%m/%Y"), amount, @balance]
   end
 
-  def withdraw(amount, date)
+  def withdraw(amount)
     @balance -= amount
-    @transactions << [date, amount, @balance]
+    @transactions << [Time.now.strftime("%d/%m/%Y"), amount, @balance]
   end
 
   def show_balance
